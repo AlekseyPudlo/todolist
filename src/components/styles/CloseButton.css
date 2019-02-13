@@ -1,0 +1,20 @@
+.close {
+	position: relative;
+	
+	text-decoration: none;
+	font-size: 1.5em;
+	font-weight: 900;
+
+	color: #000;
+	border: none;
+
+	cursor: pointer;
+	background-color: inherit;
+}
+.close:hover {
+	top: -1px;
+	filter: drop-shadow(3px 3px 7px rgba(0, 0, 0, 0.9));
+}
+.close:active {
+	top: 1px;
+}

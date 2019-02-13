@@ -1,0 +1,10 @@
+.Nav-panel{
+	display: flex;
+	flex-flow: column nowrap;
+	border-right: .1em solid #696969;
+	padding: 1em;
+	width: 30%;
+}
+button {
+	margin-bottom: .5em;
+}

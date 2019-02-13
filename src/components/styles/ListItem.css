@@ -1,0 +1,18 @@
+.list {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	padding: 0 1em;
+}
+.flex-row-nowrap {
+	display: flex;
+	flex: row nowrap;
+}
+#list-title {
+	justify-content: space-between;
+}
+#add-list-input {
+	justify-content: center;
+	margin-bottom: 1em;
+}
+

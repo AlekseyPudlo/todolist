@@ -1,0 +1,19 @@
+.item{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: baseline;
+	justify-content: space-between;
+	
+	transition: all 1s ease-out;
+}
+
+.item-link {
+	width: 80%;
+	text-decoration: none;
+	font-size: 1em;
+	font-weight: 900;
+	cursor: pointer;
+}
+.item-link:hover {
+	text-decoration: underline;
+}
