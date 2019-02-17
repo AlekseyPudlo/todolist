@@ -72,7 +72,7 @@ class Popup extends Component {
 					/>
 					<div className="button-form">
 						<CustomButton onClick={this.discard} text="Discard" />
-						<CustomButton onClick={this.handleClick}  text="Save" />
+						<CustomButton onClick={this.handleClick} text="Save" />
 					</div>
 				</form>
 			</div>

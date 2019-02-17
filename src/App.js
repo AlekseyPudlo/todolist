@@ -19,11 +19,13 @@ class App extends Component {
 	};
 
 	createList = newList => {
-		this.setState({
-			lists: [...this.state.lists, newList],
-			showPopup: !this.state.showPopup,
-			listToRender: newList
-		});
+		this.state.lists.some(stateList => stateList.listName === newList.listName)
+			? alert('There is the element with "' + newList.listName + '" name.')
+			: this.setState({
+					lists: [...this.state.lists, newList],
+					showPopup: !this.state.showPopup,
+					listToRender: newList
+			  });
 	};
 
 	updateList = list => {
