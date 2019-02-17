@@ -58,7 +58,7 @@ class ListItem extends Component {
 						placeholder="Type your task here..."
 						maxLength={40}
 					/>
-					<CustomButton text="ADD" onClick={this.handleSubmit} />
+					<CustomButton type="submit" text="ADD"/>
 				</div>
 				<ItemsList items={list.items} />
 			</form>
