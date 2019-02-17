@@ -30,7 +30,8 @@ class Popup extends Component {
 		});
 	};
 
-	handleClick = () => {
+	handleSubmit = event => {
+		if (event) event.preventDefault();
 		!this.state.listName
 			? alert("The List Name could not be empty!..")
 			: this.props.createList({
@@ -43,11 +44,6 @@ class Popup extends Component {
 			listName: "",
 			keyCounter: this.state.keyCounter + 1
 		});
-	};
-
-	handleSubmit = event => {
-		event.preventDefault();
-		this.handleClick();
 	};
 
 	render() {
@@ -71,8 +67,8 @@ class Popup extends Component {
 						maxLength={16}
 					/>
 					<div className="button-form">
+						<CustomButton type="submit" text="Save" />
 						<CustomButton onClick={this.discard} text="Discard" />
-						<CustomButton onClick={this.handleClick} text="Save" />
 					</div>
 				</form>
 			</div>
