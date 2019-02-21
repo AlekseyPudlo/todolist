@@ -1,0 +1,12 @@
+.list-items {
+    margin: 1em;
+    display: flex;
+    flex-direction: column; 
+}
+.checkbox-custom {
+    transform: scale(2);
+    margin: 1em 2em;
+}
+.checkbox-label {
+    font-size: 1.4em;
+}

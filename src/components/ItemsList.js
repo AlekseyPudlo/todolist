@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./styles/ItemsList.css";
 
 class ItemsList extends Component {
 	constructor(props) {
@@ -6,13 +7,17 @@ class ItemsList extends Component {
 		this.state = { };
 	}
 
+	handleCheckbox = item => {
+
+	}
+
 	render() {
 		return (
-			<div className="list ">
+			<div className="list-items">
 				{this.props.items.map(item => {
 					return (
-						<label>
-							<input type="checkbox" />
+						<label className="checkbox-label">
+							<input type="checkbox" className="checkbox-custom"/>
 							{item.name}
 						</label>
 					);
