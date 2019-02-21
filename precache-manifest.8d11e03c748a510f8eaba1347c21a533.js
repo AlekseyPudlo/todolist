@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/todolist/static/js/runtime~main.f2982e14.js"
   },
   {
-    "revision": "2d935a6779a94dd1333e",
-    "url": "/todolist/static/js/main.2d935a67.chunk.js"
+    "revision": "ff2aff7278b5f2158ceb",
+    "url": "/todolist/static/js/main.ff2aff72.chunk.js"
   },
   {
     "revision": "53f1e0702107373675d6",
     "url": "/todolist/static/js/1.53f1e070.chunk.js"
   },
   {
-    "revision": "2d935a6779a94dd1333e",
-    "url": "/todolist/static/css/main.8c839099.chunk.css"
+    "revision": "ff2aff7278b5f2158ceb",
+    "url": "/todolist/static/css/main.930d7da1.chunk.css"
   },
   {
-    "revision": "468d70744ef892e026c2795588c37973",
+    "revision": "8a361d5994986999277cc7d4fcf6b250",
     "url": "/todolist/index.html"
   }
 ];
