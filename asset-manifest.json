@@ -1,13 +1,13 @@
 {
-  "main.css": "/todolist/static/css/main.18e0b0c3.chunk.css",
-  "main.js": "/todolist/static/js/main.30aa4c88.chunk.js",
-  "main.js.map": "/todolist/static/js/main.30aa4c88.chunk.js.map",
+  "main.css": "/todolist/static/css/main.8c839099.chunk.css",
+  "main.js": "/todolist/static/js/main.2d935a67.chunk.js",
+  "main.js.map": "/todolist/static/js/main.2d935a67.chunk.js.map",
   "static/js/1.53f1e070.chunk.js": "/todolist/static/js/1.53f1e070.chunk.js",
   "static/js/1.53f1e070.chunk.js.map": "/todolist/static/js/1.53f1e070.chunk.js.map",
   "runtime~main.js": "/todolist/static/js/runtime~main.f2982e14.js",
   "runtime~main.js.map": "/todolist/static/js/runtime~main.f2982e14.js.map",
-  "static/css/main.18e0b0c3.chunk.css.map": "/todolist/static/css/main.18e0b0c3.chunk.css.map",
+  "static/css/main.8c839099.chunk.css.map": "/todolist/static/css/main.8c839099.chunk.css.map",
   "index.html": "/todolist/index.html",
-  "precache-manifest.9a436e2618233df46bfd54c60e7bc34c.js": "/todolist/precache-manifest.9a436e2618233df46bfd54c60e7bc34c.js",
+  "precache-manifest.09e7b83e1a089a019fe229e39b552073.js": "/todolist/precache-manifest.09e7b83e1a089a019fe229e39b552073.js",
   "service-worker.js": "/todolist/service-worker.js"
 }
