@@ -9,18 +9,24 @@ class ListItem extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			newItem: "",
+			newItem: {
+				name: "",
+				isChecked: false
+			}
 		};
 	}
 
 	componentDidUpdate(prevProps) {
 		// Typical usage (don't forget to compare props):
 		if (this.props !== prevProps) {
-		  this.setState({
-			  newItem: "",
-		  })
+			this.setState({
+				newItem: {
+					name: "",
+					isChecked: false
+				}
+			});
 		}
-	  }
+	}
 
 	addItem = () => {
 		let items = [...this.props.list.items, this.state.newItem];
@@ -31,13 +37,18 @@ class ListItem extends Component {
 
 	handleChange = event => {
 		this.setState({
-			newItem: event.target.value
+			newItem: {
+				name: event.target.value,
+				isChecked: false,
+			},
 		});
 	};
 
 	handleSubmit = event => {
 		event.preventDefault();
-		this.state.newItem ? this.addItem() : alert("Item cannot be empty!..");
+		this.state.newItem.name
+			? this.addItem()
+			: alert("Items Name cannot be empty!..");
 	};
 
 	closeList = () => this.props.getListToShow(null);
@@ -46,19 +57,19 @@ class ListItem extends Component {
 		const list = this.props.list;
 		return !list ? null : (
 			<form className="list" onSubmit={this.handleSubmit}>
-				<div id="list-title" className="flex-row-nowrap">
+				<div id="list-title" className="flex-nowrap">
 					<h2>{list.listName}</h2>
 					<CloseButton onClick={this.closeList} />
 				</div>
-				<div id="add-list-input" className="flex-row-nowrap">
+				<div id="add-list-input">
 					<TextInput
-						value={this.state.newItem}
+						value={this.state.newItem.name}
 						onChange={this.handleChange}
 						type="text"
 						placeholder="Type your task here..."
 						maxLength={40}
 					/>
-					<CustomButton type="submit" text="ADD"/>
+					<CustomButton type="submit" text="ADD" />
 				</div>
 				<ItemsList items={list.items} />
 			</form>
