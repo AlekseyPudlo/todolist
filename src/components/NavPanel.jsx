@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import NavItem from "./NavItem.js";
-import CustomButton from "./CustomButton.js";
+import NavItem from "./NavItem.jsx";
+import CustomButton from "./CustomButton.jsx";
 import "./styles/NavPanel.css";
 
 class NavPanel extends Component {

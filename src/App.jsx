@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import NavPanel from "./components/NavPanel.js";
-import ListItem from "./components/ListItem.js";
-import Popup from "./components/Popup.js";
+import NavPanel from "./components/NavPanel.jsx";
+import ListItem from "./components/ListItem.jsx";
+import Popup from "./components/Popup.jsx";
 
 class App extends Component {
 	constructor(props) {

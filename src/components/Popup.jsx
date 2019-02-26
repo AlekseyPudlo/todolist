@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import CustomButton from "./CustomButton.js";
-import CloseButton from "./CloseButton.js";
-import TextInput from "./TextInput.js";
+import CustomButton from "./CustomButton.jsx";
+import CloseButton from "./CloseButton.jsx";
+import TextInput from "./TextInput.jsx";
 import "./styles/Popup.css";
 
 class Popup extends Component {

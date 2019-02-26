@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import ItemsList from "./ItemsList.js";
-import CloseButton from "./CloseButton.js";
-import CustomButton from "./CustomButton.js";
-import TextInput from "./TextInput.js";
+import TodoItems from "./TodoItems.jsx";
+import CloseButton from "./CloseButton.jsx";
+import CustomButton from "./CustomButton.jsx";
+import TextInput from "./TextInput.jsx";
 import "./styles/ListItem.css";
 
 class ListItem extends Component {
@@ -71,7 +71,7 @@ class ListItem extends Component {
 					/>
 					<CustomButton type="submit" text="ADD" />
 				</div>
-				<ItemsList items={list.items} />
+				<TodoItems items={list.items}/>
 			</form>
 		);
 	}

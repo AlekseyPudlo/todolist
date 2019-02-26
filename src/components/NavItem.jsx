@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CloseButton from "./CloseButton.js";
+import CloseButton from "./CloseButton.jsx";
 import "./styles/NavItem.css";
 
 class NavItem extends Component {

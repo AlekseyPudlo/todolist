@@ -4,9 +4,9 @@
     flex-direction: column; 
 }
 .checkbox-custom {
-    transform: scale(2);
+    transform: scale(1.2);
     margin: 1em 2em;
 }
 .checkbox-label {
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
