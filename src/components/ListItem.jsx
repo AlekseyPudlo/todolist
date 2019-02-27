@@ -29,10 +29,10 @@ class ListItem extends Component {
 	}
 
 	addItem = () => {
-		let items = [...this.props.list.items, this.state.newItem];
-		let list = this.props.list;
-		list.items = items;
-		this.props.updateList(list);
+		const { list, updateList} = this.props;
+		let listUpdated = list;
+		listUpdated.items = [...list.items, this.state.newItem];
+		updateList(listUpdated);
 	};
 
 	handleChange = event => {
@@ -54,11 +54,11 @@ class ListItem extends Component {
 	closeList = () => this.props.getListToShow(null);
 
 	render() {
-		const list = this.props.list;
-		return !list ? null : (
+		const listCopy = this.props.list;
+		return !listCopy ? null : (
 			<form className="list" onSubmit={this.handleSubmit}>
 				<div id="list-title" className="flex-nowrap">
-					<h2>{list.listName}</h2>
+					<h2>{listCopy.listName}</h2>
 					<CloseButton onClick={this.closeList} />
 				</div>
 				<div id="add-list-input">
@@ -71,7 +71,7 @@ class ListItem extends Component {
 					/>
 					<CustomButton type="submit" text="ADD" />
 				</div>
-				<TodoItems items={list.items}/>
+				<TodoItems items={listCopy.items}/>
 			</form>
 		);
 	}

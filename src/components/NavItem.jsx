@@ -3,15 +3,9 @@ import CloseButton from "./CloseButton.jsx";
 import "./styles/NavItem.css";
 
 class NavItem extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {};
-	}
 
 	render() {
-		const lists = this.props.lists;
-		const getListToShow = this.props.getListToShow;
-		const removeList = this.props.removeList;
+		const {getListToShow, removeList, lists } = this.props;
 
 		return lists.map(list => (
 			<div className="item">

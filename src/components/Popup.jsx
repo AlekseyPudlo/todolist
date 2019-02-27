@@ -47,7 +47,7 @@ class Popup extends Component {
 	};
 
 	render() {
-		const showPopup = this.props.showPopup;
+		const {showPopup} = this.props;
 		const title = !this.state.listName
 			? "a new"
 			: this.shortName(this.state.listName);

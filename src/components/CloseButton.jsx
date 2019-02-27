@@ -1,20 +1,12 @@
-import React, {Component} from "react"
-import "./styles/CloseButton.css"
+import React, { Component } from "react";
+import "./styles/CloseButton.css";
 
-
-class CloseButton extends Component {
-	
-	render() {
-		return (
-			<button
-				type="button"
-				className="close"
-				onClick={this.props.onClick}
-			>
-				&times;
-			</button>
-		)
-	}
-}
+const CloseButton = ({onClick}) => {
+	return (
+		<button type="button" className="close" onClick={onClick}>
+			&times;
+		</button>
+	);
+};
 
 export default CloseButton;

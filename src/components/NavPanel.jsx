@@ -4,22 +4,16 @@ import CustomButton from "./CustomButton.jsx";
 import "./styles/NavPanel.css";
 
 class NavPanel extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {};
-	}
 
 	render() {
+		const { getListToShow, removeList, togglePopup, lists } = this.props;
 		return (
 			<nav className="Nav-panel">
-				<CustomButton
-					onClick={this.props.togglePopup}
-					text="Create ToDo List"
-				/>
+				<CustomButton onClick={togglePopup} text="Create ToDo List" />
 				<NavItem
-					lists={this.props.lists}
-					getListToShow={this.props.getListToShow}
-					removeList={this.props.removeList}
+					lists={lists}
+					getListToShow={getListToShow}
+					removeList={removeList}
 				/>
 			</nav>
 		);

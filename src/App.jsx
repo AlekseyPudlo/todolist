@@ -69,7 +69,6 @@ class App extends Component {
 					removeList={this.removeList}
 					togglePopup={this.togglePopup}
 					lists={this.state.lists}
-					shortListName={this.shortListName}
 				/>
 				<ListItem
 					list={this.state.listToRender}
