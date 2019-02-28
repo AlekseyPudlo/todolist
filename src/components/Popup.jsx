@@ -31,26 +31,28 @@ class Popup extends Component {
 	};
 
 	handleSubmit = event => {
+		const { listName, keyCounter } = this.state;
 		if (event) event.preventDefault();
-		!this.state.listName
+		!listName
 			? alert("The List Name could not be empty!..")
 			: this.props.createList({
-					listName: this.state.listName,
-					shortListName: this.shortName(this.state.listName),
-					key: this.state.keyCounter,
+					listName: listName,
+					shortListName: this.shortName(listName),
+					key: keyCounter,
 					items: []
 			  });
 		this.setState({
 			listName: "",
-			keyCounter: this.state.keyCounter + 1
+			keyCounter: keyCounter + 1
 		});
 	};
 
 	render() {
-		const {showPopup} = this.props;
-		const title = !this.state.listName
+		const { showPopup } = this.props;
+		const { listName } = this.state;
+		const title = !listName
 			? "a new"
-			: this.shortName(this.state.listName);
+			: this.shortName(listName);
 
 		return !showPopup ? null : (
 			<div className="popup">
@@ -60,7 +62,7 @@ class Popup extends Component {
 						<CloseButton onClick={this.discard} />
 					</div>
 					<TextInput
-						value={this.state.listName}
+						value={listName}
 						onChange={this.handleChange}
 						type="text"
 						placeholder="Type the List name please..."

@@ -19,11 +19,12 @@ class App extends Component {
 	};
 
 	createList = newList => {
-		this.state.lists.some(stateList => stateList.listName === newList.listName)
+		const { lists, showPopup } = this.state;
+		lists.some(stateList => stateList.listName === newList.listName)
 			? alert('There is the element with "' + newList.listName + '" name.')
 			: this.setState({
-					lists: [...this.state.lists, newList],
-					showPopup: !this.state.showPopup,
+					lists: [...lists, newList],
+					showPopup: !showPopup,
 					listToRender: newList
 			  });
 	};
@@ -45,10 +46,15 @@ class App extends Component {
 	};
 
 	removeList = listToRemove => {
+		/* Here we make filter all listst where key value is not like
+		 in list should be removed, because key is the unic id and there
+		 is no more the same key value in another list*/
 		this.setState(prevState => {
 			const lists = prevState.lists.filter(
 				list => list.key !== listToRemove.key
 			);
+			/* At the same time we shell set new list to render
+			before return new state, if there removed list rendering we render null */
 			const listToRender =
 				!prevState.listToRender ||
 				prevState.listToRender.key === listToRemove.key
@@ -62,21 +68,22 @@ class App extends Component {
 	};
 
 	render() {
+		const { lists, listToRender, showPopup } = this.state;
 		return (
 			<div className="App">
 				<NavPanel
 					getListToShow={this.getListToShow}
 					removeList={this.removeList}
 					togglePopup={this.togglePopup}
-					lists={this.state.lists}
+					lists={lists}
 				/>
 				<ListItem
-					list={this.state.listToRender}
+					list={listToRender}
 					getListToShow={this.getListToShow}
 					updateList={this.updateList}
 				/>
 				<Popup
-					showPopup={this.state.showPopup}
+					showPopup={showPopup}
 					togglePopup={this.togglePopup}
 					createList={this.createList}
 				/>
